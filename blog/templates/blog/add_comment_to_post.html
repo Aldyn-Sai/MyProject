@@ -1,0 +1,16 @@
+<!-- blog/templates/blog/add_comment_to_post.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Comment</title>
+</head>
+<body>
+    <h1>Add Comment</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Comment</button>
+    </form>
+    <a href="{% url 'post_list' %}">Cancel</a>
+</body>
+</html>
